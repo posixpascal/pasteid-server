@@ -1,0 +1,31 @@
+{
+  "source": "./src/",
+  "destination": "./docs",
+  "plugins": [
+    {
+      "name": "esdoc-node-plugin",
+      "option": {
+        "base": ".",
+        "devDependencies": false
+      }
+    },
+    {
+      "name": "esdoc-standard-plugin",
+      "option": {
+        "lint": { "enable": true },
+        "coverage": {"enable": true},
+        "accessor": {"access": ["public", "protected", "private"], "autoPrivate": true},
+        "undocumentIdentifier": {"enable": true},
+        "unexportedIdentifier": {"enable": false},
+        "typeInference": {"enable": true},
+        "brand": {
+          "title": "WALLS.digital JS API",
+          "description": "Receive socialmedia updates in realtime using WALLS.digital",
+          "repository": "https://bitbucket.com/mediatrooper/walls.digital",
+          "site": "https://walls.digital",
+          "author": "Pascal Raszyk"
+        }
+      }
+    }
+  ]
+}
