@@ -7,6 +7,12 @@ const bodyParser = require('body-parser');
 api.use(bodyParser.json());
 api.use(bodyParser.urlencoded({ extended: false }));
 
+api.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "paste.id, www.paste.id");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 api.post('/storage', async (req, res) => {
   try {
     const newPaste = await pasteRepository.store(req.body.content);
