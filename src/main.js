@@ -1,3 +1,4 @@
+require("dotenv").config();
 import pasteRepository from './pasteRepository';
 
 const api = require('express')();
