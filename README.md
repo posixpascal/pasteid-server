@@ -91,10 +91,12 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 ## Contribution
 Contribution is generally appreciated. Here are a few things you can do to extend paste.id server:
 
-- replace mySQL in pasteRepository.js with an ORM so we can hook up other DBs
-- extract the DB storage mechanism in a different class so we later add storage to textfiles as well by injecting the required `StorageMechanism`
+- Add unit tests
+- Replace mySQL in pasteRepository.js with an ORM so we can hook up other DBs
+- Extract the DB storage mechanism in a different class so we later add storage to textfiles as well by injecting the required `StorageMechanism`
 - Add better error handling
 - Add support to "verify" a pgp encrypted paste without outputting the content by accepting a public key via variable.
 - Add scripts to auto-remove logfiles etc.
 - Add expiration to pastes.
+- Add option to generate a more "random" ID rather than using the SQL autoincrement ID.
 
